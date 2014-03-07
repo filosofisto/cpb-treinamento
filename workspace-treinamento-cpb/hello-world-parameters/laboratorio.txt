@@ -1,0 +1,13 @@
+================================================================================
+Laboratório
+================================================================================
+1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: laboratorio01 
+   - version: 0.0.1-SNAPSHOT
+   a) O programa devera receber um conjunto variavel de parametros numericos (inteiros) e devera
+     exibir no console o somatorio dos valores e a media aritmetica
+   b) Se o usuario nao passar parametros, o programa devera exibir uma mensagem instruindo o usuario
+     a forma correta de utilizacao
+   c) O programa devera tambem exibir uma media ponderada onde os numeros pares tem peso 2 e os
+      impares peso 3
