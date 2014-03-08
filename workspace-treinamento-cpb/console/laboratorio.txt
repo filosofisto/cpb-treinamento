@@ -1,0 +1,10 @@
+================================================================================
+Laboratório
+================================================================================
+1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: console-lab 
+   - version: 0.0.1-SNAPSHOT
+   a) Faca uma copia do programa estrutura-controle 
+   b) Altere a copia para ler os parametros salario, idade e filhos a partir do teclado
+   c) Faca versoes utilizando a classe Console e Scanner
