@@ -1,0 +1,20 @@
+================================================================================
+Laboratório
+================================================================================
+1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: operators-lab1 
+   - version: 0.0.1-SNAPSHOT
+   a) O programa devera receber um numero e informar quais bits estão setados para 1 
+      e quais estao setados para 0.
+2) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: operators-lab2 
+   - version: 0.0.1-SNAPSHOT
+   a) O programa devera receber um numero, uma operacao aritmetica e outro numero, 
+      tal como uma calculadora e informar o resultado da operacao.
+      Ex: 1 + 2 = 3
+          3 * 3 = 9
+          3 / 2 = 1.5
+          3 - 4 = -1
+

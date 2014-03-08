@@ -3,7 +3,7 @@ Laboratório
 ================================================================================
 1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
    - groupId: com.javabasico.laboratorio,
-   - artfactId: laboratorio01 
+   - artfactId: hello-world-parameters-lab 
    - version: 0.0.1-SNAPSHOT
    a) O programa devera receber um conjunto variavel de parametros numericos (inteiros) e devera
      exibir no console o somatorio dos valores e a media aritmetica
