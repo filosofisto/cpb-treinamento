@@ -1,0 +1,15 @@
+================================================================================
+Laboratório
+================================================================================
+1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: estrutura-controle-lab 
+   - version: 0.0.1-SNAPSHOT
+   a) O programa devera calcular o beneficio conforme as regras abaixo:
+      - Valor inicial eh $500 + 1% do salario
+      - Para cada ano de idade superior a 25 devera acrescentar 0.5% do salario
+      - Se o funcionario ultrapassar os 65 anos de idade, para cada ano ultrapassado
+        devera reduzir o beneficio na ordem de 0.75% do salario
+      - Para cada filho ate a quantidade de 3, acrescentar $100. De 4 a 5 filhos
+        acrescentar mais 1% do salario. De 6 a 7 filhos acrescentar 1.5% do salario.
+        Para mais de 7 filho acrescenar 2.5% do salario
