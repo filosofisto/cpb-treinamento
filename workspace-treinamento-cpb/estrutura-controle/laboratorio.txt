@@ -13,3 +13,5 @@ Laboratório
       - Para cada filho ate a quantidade de 3, acrescentar $100. De 4 a 5 filhos
         acrescentar mais 1% do salario. De 6 a 7 filhos acrescentar 1.5% do salario.
         Para mais de 7 filho acrescenar 2.5% do salario
+2) Faca uma copia do projeto anterior alterando-o para nao utilizar o switch, utilize
+   apenas estruturas if (if, if else, if else if).
