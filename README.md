@@ -1,3 +1,3 @@
 cpb-treinamento
 ===============
-Repositorio para o treinamento Java CPB
+Repositorio para o treinamento Java Comitê Paralímpico Brasileiro
