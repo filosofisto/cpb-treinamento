@@ -14,7 +14,6 @@
 	</properties>
 	
 	<build>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -27,6 +26,20 @@
 					<showWarnings>true</showWarnings>
 					<optimize>true</optimize>
 					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.javabasico.Main</mainClass>
+							<classpathPrefix>dependency/</classpathPrefix>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
