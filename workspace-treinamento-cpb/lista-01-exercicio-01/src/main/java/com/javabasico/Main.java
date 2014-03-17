@@ -1,21 +1,22 @@
 package com.javabasico;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
-	private static Scanner scanner;
-	
 	public static void main(String[] args) {
-		inicializaConsole();
+		Scanner scanner = new Scanner(System.in);
 		
-		String valor1 = leConsole("Entre com o primeiro numero:");
-		String valor2 = leConsole("Entre com o segundo numero:");
-		String valor3 = leConsole("Entre com o terceiro numero:");
+		/*System.out.println("Entre com o primeiro numero:");
+		int a = scanner.nextInt();
 		
-		int a = Integer.parseInt(valor1);
-		int b = Integer.parseInt(valor2);
-		int c = Integer.parseInt(valor3);
+		System.out.println("Entre com o segundo numero:");
+		int b = scanner.nextInt();
+		
+		System.out.println("Entre com o terceiro numero:");
+		int c = scanner.nextInt();
+		
 		int primeiro, segundo, terceiro;
 		
 		if (a >= b && a >= c) {
@@ -50,23 +51,20 @@ public class Main {
 		System.out.printf("Primeiro: %d\nSegundo: %d\nTerceiro: %d",
 				primeiro,
 				segundo,
-				terceiro);
+				terceiro);*/
 		
-		fechaConsole();
-	}
-	
-	private static void inicializaConsole() {
-		scanner = new Scanner(System.in);
-	}
-	
-	private static void fechaConsole() {
+		int[] lista = new int[3];
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println("Entre com o valor:");
+			lista[i] = scanner.nextInt();
+		}
+		
+		Arrays.sort(lista);
+		
+		for (int i = 0; i < lista.length; i++) {
+			System.out.printf("%d\n", lista[i]);
+		}
+		
 		scanner.close();
-	}
-	
-	private static String leConsole(String label) {
-		System.out.print(label);
-		String input = scanner.next();
-		
-		return input;
 	}
 }
