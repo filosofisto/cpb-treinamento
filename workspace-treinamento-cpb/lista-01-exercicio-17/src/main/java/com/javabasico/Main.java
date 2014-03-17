@@ -14,6 +14,17 @@ public class Main {
 		scanner.close();
 	}
 
+	private static long fatorialNormal(long n) {
+		long resultado = 1;
+		
+		//for (int i = 2; i <= n; i++) {
+		for (long i = n; i > 1; i--) {
+			resultado = resultado * i;
+		}
+		
+		return resultado;
+	}
+	
 	private static long fatorial(long n) {
 		 if (n < 2) {
 			 return 1;
