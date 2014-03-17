@@ -15,7 +15,7 @@ public class Main {
 		
 		System.out.print("Entre com o seu nome: ");
 		String input = co.readLine();
-		co.printf("Parabens %s", input);
+		co.printf("Parabens %s\n", input);
 	}
 	
 	private static void ideConsole() {
@@ -23,6 +23,6 @@ public class Main {
 		
 		System.out.print("Entre com o seu nome: ");
 		String input = s.next();
-		System.out.printf("Parabens %s", input);
+		System.out.printf("Parabens %s\n", input);
 	}
 }

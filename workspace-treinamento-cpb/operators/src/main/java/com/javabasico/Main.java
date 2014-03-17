@@ -2,7 +2,7 @@ package com.javabasico;
 
 public class Main {
 
-	private static char variavel;
+	private static char var;
 	
 	public static void main(String[] args) {
 		//-----------------------------------
@@ -69,28 +69,28 @@ public class Main {
 			System.out.println("Sempre imprimira esta mensagem tambem");
 		}
 		
-		variavel = 'B';
+		var = 'B';
 		if (1 == 1 || alteraVariavelERetornaTrue()) {
-			System.out.printf("Gostaria que variavel fosse igual a 'A', mas o valor dela eh %s\n", variavel);
+			System.out.printf("Gostaria que variavel fosse igual a 'A', mas o valor dela eh %s\n", var);
 		}
 		
-		variavel = 'B';
+		var = 'B';
 		if (1 == 1 | alteraVariavelERetornaTrue()) {
-			System.out.printf("Gostaria que variavel fosse igual a 'A', e o valor dela eh %s\n", variavel);
+			System.out.printf("Gostaria que variavel fosse igual a 'A', e o valor dela eh %s\n", var);
 		}
 		
-		variavel = 'B';
+		var = 'B';
 		if (1 == 0 && alteraVariavelERetornaTrue()) {
 			//Nunca entrara aqui
 		} else {
-			System.out.printf("Gostaria que variavel fosse igual a 'A', mas o valor dela eh %s\n", variavel);
+			System.out.printf("Gostaria que variavel fosse igual a 'A', mas o valor dela eh %s\n", var);
 		}
 		
-		variavel = 'B';
+		var = 'B';
 		if (1 == 0 & alteraVariavelERetornaTrue()) {
 			//Nunca entrara aqui
 		} else {
-			System.out.printf("Gostaria que variavel fosse igual a 'A', e o valor dela eh %s\n", variavel);
+			System.out.printf("Gostaria que variavel fosse igual a 'A', e o valor dela eh %s\n", var);
 		}
 		
 		//-----------------------------------
@@ -152,7 +152,7 @@ public class Main {
 	}
 	
 	private static boolean alteraVariavelERetornaTrue() {
-		variavel = 'A';
+		var = 'A';
 		
 		return true;
 	}

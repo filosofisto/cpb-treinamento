@@ -11,6 +11,10 @@ public class Lab {
 		float total = 0, totalPond = 0;
 		int atual, totalPesos = 0;
 		
+		/*
+		 * Este algoritmo eh muito facil
+		 * Soh q nao
+		 */
 		for (int i = 0; i < args.length; i++) {
 			atual = Integer.parseInt(args[i]);
 			total = total + atual;
