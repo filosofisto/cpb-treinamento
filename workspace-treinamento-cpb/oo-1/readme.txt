@@ -1,8 +1,8 @@
-Programa: 			console
-Descricao: 			Demonstra a leitura do console
+Programa: 			oo-1
+Descricao: 			Primeiro programa OO
 Caracteristicas:
   
-  1) Demonstra o uso da classe Console, Scanner e System.in
+  1) Demonstra encapsulamento e construtores
   2) Execucao em linha de comando:
   
-  		java -jar console-0.0.1-SNAPSHOT.jar
+  		java -jar oo-1-0.0.1-SNAPSHOT.jar
