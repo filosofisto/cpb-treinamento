@@ -1,0 +1,12 @@
+================================================================================
+Laboratorio
+================================================================================
+1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: oo-igura-lab 
+   - version: 0.0.1-SNAPSHOT
+   Considere os seguintes requisitos:
+   a) Como voce definiria uma semantica de igualdade para cada tipo?
+   b) Como voce tornaria os tipos clonaveis?
+   c) Defina representacoes String de cada tipo
+    

@@ -1,6 +1,6 @@
 package com.javabasico;
 
-public class Retangulo extends AbstractFigura {
+public class Retangulo extends Figura {
 
 	private double base;
 	private double altura;
@@ -18,11 +18,6 @@ public class Retangulo extends AbstractFigura {
 	@Override
 	public double area() {
 		return base*altura;
-	}
-
-	@Override
-	public void desenhar() {
-		System.out.println("DESENHAR QUADRADO");
 	}
 
 }

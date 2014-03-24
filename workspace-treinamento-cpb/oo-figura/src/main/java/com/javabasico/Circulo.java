@@ -1,6 +1,6 @@
 package com.javabasico;
 
-public class Circulo extends AbstractFigura {
+public class Circulo extends Figura {
 
 	private double raio;
 	
@@ -17,10 +17,4 @@ public class Circulo extends AbstractFigura {
 	public double area() {
 		return Math.PI*Math.pow(raio, 2);
 	}
-
-	@Override
-	public void desenhar() {
-		System.out.println("DESENHAR CIRCULO");
-	}
-
 }
