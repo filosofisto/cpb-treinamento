@@ -5,6 +5,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		Pessoa pele = new Pessoa();
+		pele.setNome("Edson");
+		pele.setCpf("800000000");
+		
+		Funcionario f = new Funcionario();
+		f.setCpf("800000000");
+		
+		if (f.equals(pele)) {
+			System.out.println("The same");
+		} else {
+			System.out.println("Diferente");
+		}
+		/*Pessoa pele = new Pessoa();
 		pele.setNome("Pele");
 		pele.setCpf("81646674987");
 		System.out.println(pele.toString());
@@ -42,6 +54,6 @@ public class Main {
 		Funcionario g = new Gerente();
 		g.setSalario(1000);
 		((Gerente) g).setAjudaCusto(10.0);
-		System.out.printf("Valor Total Gerente: %.2f\n", g.getSalarioTotal());
+		System.out.printf("Valor Total Gerente: %.2f\n", g.getSalarioTotal());*/
 	}
 }
