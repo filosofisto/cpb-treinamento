@@ -1,0 +1,12 @@
+================================================================================
+Laboratório
+================================================================================
+1) Desenvolva um projeto em Java utilizando Maven com as seguintes caracteristicas:
+   - groupId: com.javabasico.laboratorio,
+   - artfactId: oo-clone-lab 
+   - version: 0.0.1-SNAPSHOT
+   Considere os seguintes requisitos:
+   a) Um produto possui os seguintes atributos: codigo, descricao e unidade de medida
+   b) Uma lista de compra eh formada por uma lista de produtos
+   c) O programa deve permitir a criacao de uma lista baseada em outra atraves de clonagem de objetos
+    
