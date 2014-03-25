@@ -24,18 +24,18 @@ public class Pessoa implements Cloneable {
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
-	@Override
-	protected Pessoa clone() {
+	/*@Override
+	public Pessoa clone() {
 		try {
 			return (Pessoa) super.clone();
 		} catch (CloneNotSupportedException e) {
 			return null;
 		}
-	}
+	}*/
 	
-	/*//Solucao
+	//Solucao
 	@Override
-	protected Pessoa clone() {
+	public Pessoa clone() {
 		try {
 			Cidade cidadeClone = getCidade().clone();
 			Pessoa clone = (Pessoa) super.clone();
@@ -45,5 +45,5 @@ public class Pessoa implements Cloneable {
 		} catch (CloneNotSupportedException e) {
 			return null;
 		}
-	}*/
+	}
 }

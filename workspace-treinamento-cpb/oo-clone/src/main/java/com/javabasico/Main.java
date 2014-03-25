@@ -3,9 +3,9 @@ package com.javabasico;
 public class Main {
 
 	public static void main(String[] args) {
-		/*Ponto p1 = new Ponto(10, 20);
+		Ponto p1 = new Ponto(10, 20);
 		
-		Ponto p2 = (Ponto) p1.clone();
+		Ponto p2 = p1.clone();
 		System.out.println(p2);
 		
 		if (p1 == p2) {
@@ -20,8 +20,8 @@ public class Main {
 			System.out.println("Semanticamente Diferentes");
 		}
 		
-		System.out.println("P1: " + p1);
-		System.out.println("P2: " + p2);*/
+		p1.setX(5);
+		System.out.println(p2.getX());
 		
 		//----------------------------------------------------------------------------------
 		
@@ -36,8 +36,9 @@ public class Main {
 		Pessoa outroPele = pele.clone();
 		outroPele.getCidade().setNome("Porto Alegre");
 		
-		
-		System.out.println("Cidade do Pele Original: " + pele.getCidade().getNome());
-		System.out.println("Cidade do Pele Clonado: " + outroPele.getCidade().getNome());
+		System.out.println("Cidade do Pele Original: " 
+				+ pele.getCidade().getNome());
+		System.out.println("Cidade do Pele Clonado: " 
+				+ outroPele.getCidade().getNome());
 	}
 }

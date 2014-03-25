@@ -13,7 +13,7 @@ public class Cidade implements Cloneable {
 	}
 
 	@Override
-	protected Cidade clone() {
+	public Cidade clone() {
 		try {
 			return (Cidade) super.clone();
 		} catch (CloneNotSupportedException e) {
