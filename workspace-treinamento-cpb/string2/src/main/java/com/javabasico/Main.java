@@ -9,6 +9,7 @@ public class Main {
 		
 		String s1 = null;
 		if ("Teste".equals(s1)) {
+		//if (s1.equals("Teste")) {
 			System.out.println("Igual");
 		} else {
 			System.out.println("Diferente");
