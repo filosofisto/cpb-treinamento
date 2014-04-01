@@ -11,7 +11,6 @@ public class Main {
 			p.setIdade(-1);
 		} catch (IdadeInvalidaException e) {
 			System.out.println("Sr usuario lamendo mas a idade nao eh valida");
-			//e.printStackTrace();
 		}
 	}
 }

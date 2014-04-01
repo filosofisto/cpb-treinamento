@@ -8,7 +8,7 @@ public class Main {
 		p.setNome("Maradona");
 		
 		try {
-			p.setIdade(-1);
+			p.setIdade(1);
 		} catch (IdadeNegativaException e) {
 			System.out.println("Aviso: a data nao foi atualizada");
 		} catch (IdadeMuitoGrandeException e) {
