@@ -1,5 +1,8 @@
 package com.javabasico;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Veiculo {
 
 	private Integer renavam;

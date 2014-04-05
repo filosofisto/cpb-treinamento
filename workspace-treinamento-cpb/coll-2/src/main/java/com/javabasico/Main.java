@@ -24,7 +24,8 @@ public class Main {
 			
 			Veiculo v = new Veiculo(renavam);
 			boolean adicionou = set.add(v);
-			out.printf("Adicionou veículo %d, %b\n", renavam, adicionou);
+			out.printf("Adicionou veiculo %d, %b\n", 
+					renavam, adicionou);
 		}
 		
 		set.add(null);
