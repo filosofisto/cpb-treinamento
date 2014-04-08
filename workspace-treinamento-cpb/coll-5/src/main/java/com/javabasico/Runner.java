@@ -8,7 +8,7 @@ public class Runner {
 		long t2 = System.currentTimeMillis();
 		
 		System.out.printf(
-				"Operação: %s, tempo: %dms\n", 
+				"Operacao: %s, tempo: %dms\n", 
 				operation.getDescricao(), 
 				t2-t1);
 	}

@@ -122,7 +122,7 @@ public class Main {
 
 			@Override
 			public String getDescricao() {
-				return "Insersão indexada no ArrayList";
+				return "Insersao indexada no ArrayList";
 			}
 		};
 	}
@@ -136,7 +136,7 @@ public class Main {
 
 			@Override
 			public String getDescricao() {
-				return "Insersão indexada no LinkedList";
+				return "Insersao indexada no LinkedList";
 			}
 		};
 	}
