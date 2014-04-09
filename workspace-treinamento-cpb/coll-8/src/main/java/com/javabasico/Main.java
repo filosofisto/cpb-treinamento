@@ -2,6 +2,7 @@ package com.javabasico;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -25,8 +26,14 @@ public class Main {
 		System.out.printf("Tempo para localizar o item(Map): %dms\n", (t2-t1));
 		
 		t1 = System.currentTimeMillis();
-		for (Veiculo v: listVeiculos) {
+		/*for (Veiculo v: listVeiculos) {
 			if (v.getRenavam().equals(1000000)) {
+				break;
+			}
+		}*/
+		Iterator<Veiculo> it = listVeiculos.iterator();
+		while (it.hasNext()) {
+			if (it.next().equals(1000000)) {
 				break;
 			}
 		}
