@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.javabasico</groupId>
-	<artifactId>coll-5</artifactId>
+	<groupId>com.java.treinamento</groupId>
+	<artifactId>annotation4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>coll-5</name>
+	<name>annotation4</name>
 	
 	<properties>
 		<jdk.version>1.7</jdk.version>
-		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven-compiler-plugin.version>2.0.2</maven-compiler-plugin.version>
 	</properties>
 	
