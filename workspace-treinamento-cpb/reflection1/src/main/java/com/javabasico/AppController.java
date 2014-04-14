@@ -1,10 +1,10 @@
-package com.x25.logicajava;
+package com.javabasico;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
-import com.x25.logicajava.view.PrincipalFrame;
+import com.javabasico.view.PrincipalFrame;
 
 public class AppController {
 

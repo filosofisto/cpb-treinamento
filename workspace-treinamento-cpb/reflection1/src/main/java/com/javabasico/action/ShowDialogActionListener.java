@@ -1,4 +1,4 @@
-package com.x25.logicajava.action;
+package com.javabasico.action;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

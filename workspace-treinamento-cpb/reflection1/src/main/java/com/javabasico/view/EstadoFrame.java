@@ -1,11 +1,11 @@
-package com.x25.logicajava.view;
+package com.javabasico.view;
 
 import java.awt.Dimension;
 
 import javax.swing.JDialog;
 import javax.swing.WindowConstants;
 
-import com.x25.logicajava.AppController;
+import com.javabasico.AppController;
 
 @SuppressWarnings("serial")
 public class EstadoFrame extends JDialog {

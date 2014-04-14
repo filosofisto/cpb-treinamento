@@ -9,7 +9,7 @@ import static java.lang.System.out;
 public class Main {
 
 	public static void main(String[] args) {
-		NumberFormat fbr = NumberFormat.getCurrencyInstance();
+		NumberFormat fbr = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 		NumberFormat fus = NumberFormat.getCurrencyInstance(Locale.US);
 		
 		Double valor = 10575.459543;
@@ -25,9 +25,9 @@ public class Main {
 			Number v2 = converter.parse(strValor);
 			
 			out.printf("Valor: %f\n", v2);
-			out.println("Conversão ok");
+			out.println("Conversao ok");
 		} catch (ParseException e) {
-			out.println("Erro ao converter para número");
+			out.println("Erro ao converter para numero");
 		} 
 	}
 

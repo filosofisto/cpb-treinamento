@@ -1,17 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.java.treinamento</groupId>
-	<artifactId>reflection2</artifactId>
+	<groupId>com.javabasico</groupId>
+	<artifactId>reflection-use-framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>reflection2</name>
-	
+	<name>reflection-use-framework</name>
+
 	<properties>
 		<jdk.version>1.7</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven-compiler-plugin.version>2.0.2</maven-compiler-plugin.version>
 	</properties>
-	
+
+	<dependencies>
+		<dependency>
+			<groupId>com.javabasico</groupId>
+			<artifactId>reflection-framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

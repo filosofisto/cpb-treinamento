@@ -1,4 +1,4 @@
-package com.x25.logicajava.view;
+package com.javabasico.view;
 
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
@@ -11,10 +11,10 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.WindowConstants;
 
-import com.x25.logicajava.AppController;
-import com.x25.logicajava.action.SairActionListener;
-import com.x25.logicajava.action.ShowDialogActionListener;
-import com.x25.logicajava.action.SobreActionListener;
+import com.javabasico.AppController;
+import com.javabasico.action.SairActionListener;
+import com.javabasico.action.ShowDialogActionListener;
+import com.javabasico.action.SobreActionListener;
 
 @SuppressWarnings("serial")
 public class PrincipalFrame extends JFrame implements WindowListener {
