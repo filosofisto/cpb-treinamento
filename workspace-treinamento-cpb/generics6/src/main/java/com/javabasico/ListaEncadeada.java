@@ -1,4 +1,4 @@
-package curso.java;
+package com.javabasico;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

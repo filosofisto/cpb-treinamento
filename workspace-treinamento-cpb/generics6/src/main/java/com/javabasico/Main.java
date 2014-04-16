@@ -1,4 +1,4 @@
-package curso.java;
+package com.javabasico;
 
 
 /**
