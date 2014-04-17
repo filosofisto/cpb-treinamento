@@ -12,7 +12,7 @@ public class Main {
 	public static void showDay(Day day) {
 		switch (day.value()) {
 		case 0:
-			out.print("Pena que está acabando");
+			out.print("Pena que esta acabando");
 			break;
 		case 1:
 			out.print("Bora outra vez");
@@ -41,5 +41,4 @@ public class Main {
 	public static void main(String[] args) {
 		showDay(Day.FRIDAY);
 	}
-
 }

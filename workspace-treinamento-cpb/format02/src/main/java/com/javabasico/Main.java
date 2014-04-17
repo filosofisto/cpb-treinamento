@@ -9,8 +9,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		Date now = new Date();
-		SimpleDateFormat fd = new SimpleDateFormat("dd/MM/yyyy");
-		SimpleDateFormat fh = new SimpleDateFormat("hh:mm:ss a");
+		SimpleDateFormat fd = 
+				new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat fh = 
+				new SimpleDateFormat("hh:mm:ss a");
 		
 		out.println(now.toString());
 		out.println(fd.format(now));

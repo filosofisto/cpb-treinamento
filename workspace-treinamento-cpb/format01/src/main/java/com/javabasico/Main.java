@@ -9,8 +9,13 @@ import static java.lang.System.out;
 public class Main {
 
 	public static void main(String[] args) {
-		NumberFormat fbr = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-		NumberFormat fus = NumberFormat.getCurrencyInstance(Locale.US);
+		NumberFormat fbr = 
+				NumberFormat.getCurrencyInstance(
+						new Locale("pt", "BR"));
+		NumberFormat fus = NumberFormat.getCurrencyInstance(
+				Locale.US);
+		NumberFormat perc = NumberFormat.getPercentInstance();
+		System.out.println(perc.format(0.75));
 		
 		Double valor = 10575.459543;
 		

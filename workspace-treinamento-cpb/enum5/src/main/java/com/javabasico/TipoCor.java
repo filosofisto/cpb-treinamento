@@ -1,4 +1,4 @@
-package com.x25.logicajava;
+package com.javabasico;
 
 public enum TipoCor {
 

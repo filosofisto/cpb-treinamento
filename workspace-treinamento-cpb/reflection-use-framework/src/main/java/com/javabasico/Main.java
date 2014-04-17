@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			//String config = "G:/eduardo/project_history/treinamentos/instituicoes/x25/2011/logica e programacao Java6/workspace-marco-abril/reflection-use-framework/src/actions.config";
-			String config = "/home/eduardo/projetos/treinamentos/instituicoes/x25/2011/logica e programacao Java6/workspace-turma-sabado/reflection-use-framework/src/actions.config";
+			String config = "/home/filosofisto/CPB/cpb-treinamento/workspace-treinamento-cpb/reflection-use-framework/src/main/resources/actions.config";
 			ListActionLoader loader = new ListActionLoader();
 			List<Action> list = loader.load(new File(config));
 			

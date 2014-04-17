@@ -25,6 +25,16 @@ public class Main {
 		} else {
 			out.println("p1 diferente de p3");
 		}
+		
+		Veiculo v1 = new Veiculo();
+		v1.setPlaca("AAA1020");
+		Veiculo v2 = new Veiculo();
+		v2.setPlaca("AAA1020");
+		
+		if (v1.equals(v2)) {
+			System.out.println("Veiculos IGUAIS");
+		} else {
+			System.out.println("Veiculos Diferentes");
+		}
 	}
-
 }

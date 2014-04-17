@@ -39,7 +39,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		//showDay(Day.FRIDAY);
+		showDay(Day.FRIDAY);
 		
 		//Problema
 		showDay(5000);

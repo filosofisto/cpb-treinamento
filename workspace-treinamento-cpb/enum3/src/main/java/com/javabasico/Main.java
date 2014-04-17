@@ -23,7 +23,7 @@ public class Main {
 		
 		switch (day) {
 		case SUNDAY:
-			out.print("Pena que está acabando");
+			out.print("Pena que esta acabando");
 			break;
 		case MONDAY:
 			out.print("Bora outra vez");
