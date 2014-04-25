@@ -8,30 +8,31 @@ public class Main {
 		Teclado teclado = new Teclado();
 		
 		String toFind = teclado.ler(
-			"Entre com o nome do arquivo desejado: ");
+			"Entre com o nome do arquivo desejado");
 		String dirName = "/home/filosofisto/CPB/cpb-treinamento";
 		File dir = new File(dirName);
 		
-		String absPath = findFile(dir, toFind);
-		if (absPath != null) {
-			System.out.printf("Achei em %s", absPath);
+		File file = findFile(dir, toFind);
+		if (file != null) {
+			System.out.printf("Achei em %s\n", file.getAbsolutePath());
+			System.out.printf("Tamanho: %d bytes", file.length());
 		} else {
 			System.out.println("Nao encontrado :(");
 		}
 	}
 	
-	static String findFile(File dir, String toFind) {
+	static File findFile(File dir, String toFind) {
 		for (File f: dir.listFiles()) {
 			if (f.isFile()) {
 				if (f.getName().equals(toFind)) {
-					return f.getAbsolutePath();
+					return f;
 				}
 			}
 		}
 		
 		for (File f: dir.listFiles()) {
 			if (f.isDirectory()) {
-				String ret = findFile(f, toFind);
+				File ret = findFile(f, toFind);
 				if (ret != null) {
 					return ret;
 				}
