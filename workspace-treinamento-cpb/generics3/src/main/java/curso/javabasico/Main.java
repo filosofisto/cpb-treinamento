@@ -11,13 +11,15 @@ public class Main {
 		
 		Pessoa p1 = new Pessoa("Fulano");
 		Pessoa p2 = new Pessoa("Ciclano");
+		String x = "asdadasd";
 		
 		listPessoas.add(p1);
 		listPessoas.add(p2);
 		
 		System.out.println("Pessoas: " + listPessoas);
 		
-		ListaEncadeada<Integer> listIntegers = new ListaEncadeada<Integer>();
+		ListaEncadeada<Integer> listIntegers = 
+				new ListaEncadeada<Integer>();
 		
 		Integer i1 = new Integer(1);
 		Integer i2 = new Integer(2);

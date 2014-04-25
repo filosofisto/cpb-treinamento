@@ -8,4 +8,6 @@ package com.javabasico;
 )
 public class MyAnnotadedClass {
 
+	@RequestForEnhancement(date="", id=2, synopsis="")
+	private int valor;
 }

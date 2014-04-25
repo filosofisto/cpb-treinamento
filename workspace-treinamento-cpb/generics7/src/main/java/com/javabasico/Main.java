@@ -7,14 +7,16 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		Collection<Integer> cInt = new ArrayList<Integer>();
+		Collection<Integer> cInt = 
+				new ArrayList<Integer>();
 		cInt.add(8);
 		cInt.add(9);
 		cInt.add(10);
 		
 		System.out.println("cInt media=" + media(cInt));
 		
-		Collection<Float> cFloat = new ArrayList<Float>();
+		Collection<Float> cFloat = 
+				new ArrayList<Float>();
 		cFloat.add(8f);
 		cFloat.add(9f);
 		cFloat.add(10f);

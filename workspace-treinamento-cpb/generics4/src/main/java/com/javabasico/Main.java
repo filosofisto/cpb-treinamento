@@ -12,7 +12,8 @@ import java.util.Collection;
 public class Main {
 
 	public static void main(String[] args) {
-		Collection<String> col = new ArrayList<String>();
+		Collection<String> col = 
+				new ArrayList<String>();
 		col.add("Primeiro");
 		col.add("Segundo");
 	
@@ -22,13 +23,15 @@ public class Main {
 		printCollectionWild(col);
 	}
 
-	public static void printCollection(Collection<Object> col) {
+	public static void printCollection(
+			Collection<Object> col) {
 		for (Object c : col) {
 			System.out.println(c.toString());
 		}
 	}
 	
-	public static void printCollectionWild(Collection<?> col) {
+	public static void printCollectionWild(
+			Collection<?> col) {
 		for (Object c : col) {
 			System.out.println(c.toString());
 		}

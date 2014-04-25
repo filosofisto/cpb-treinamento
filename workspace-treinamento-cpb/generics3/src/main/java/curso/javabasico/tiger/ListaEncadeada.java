@@ -2,11 +2,11 @@ package curso.javabasico.tiger;
 
 public class ListaEncadeada<T> {
 
-	private Wrapper<T> first;
-	private Wrapper<T> last;
+	private Node<T> first;
+	private Node<T> last;
 	
 	public void add(T object) {
-		Wrapper<T> newLast = new Wrapper<T>(object);
+		Node<T> newLast = new Node<T>(object);
 		
 		if (first == null) {
 			first = newLast;
@@ -20,7 +20,7 @@ public class ListaEncadeada<T> {
 	public String toString() {
 		StringBuffer buf = new StringBuffer();
 		
-		Wrapper<T> actual = first;
+		Node<T> actual = first;
 		while (actual != null) {
 			buf.append(actual.toString() + ", ");
 			actual = actual.getNext();
@@ -30,12 +30,12 @@ public class ListaEncadeada<T> {
 	}
 }
 
-class Wrapper<T> {
+class Node<T> {
 	
-	private Wrapper<T> next;
+	private Node<T> next;
 	private T data;
 	
-	public Wrapper(T data) {
+	public Node(T data) {
 		this.data = data;
 	}
 	
@@ -43,11 +43,11 @@ class Wrapper<T> {
 		return data;
 	}
 
-	public Wrapper<T> getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
 
-	public void setNext(Wrapper<T> next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 	

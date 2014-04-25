@@ -1,0 +1,31 @@
+package com.x25.logicajava;
+
+import java.io.File;
+import static java.lang.System.out;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String dirName = "c:/curso-java";
+		File root = new File(dirName);
+		
+		list(root);
+	}
+	
+	static void list(File dir) {
+		out.println(dir.getAbsolutePath());
+		
+		for (File f: dir.listFiles()) {
+			if (f.isFile()) {
+				out.println(f.getAbsolutePath());
+			}
+		}
+		
+		for (File f: dir.listFiles()) {
+			if (f.isDirectory()) {
+				list(f);
+			}
+		}
+	}
+
+}

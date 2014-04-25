@@ -11,6 +11,20 @@ public class Main {
 		//Pessoa p = new Pessoa();
 		//Class c = p.getClass();
 		
+		try {
+			Class clsPessoa = Class.forName("com.javabasico.Pessoa");
+			Object oPessoa = clsPessoa.newInstance();
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		//String s = "sou um objeto";
 		Object b = new Object();
 		Class c = b.getClass();
