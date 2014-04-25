@@ -14,9 +14,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			File file = new File("c:/curso-java/dados.dat");
+			File file = new File("/home/filosofisto/CPB/cpb-treinamento/workspace-treinamento-cpb/io4/dados.dat");
 			
-			//gerarDados(file);
+			if (!file.exists()) {
+				gerarDados(file);
+			}
 			
 			lerDados(file);
 		} catch (FileNotFoundException e) {
@@ -45,7 +47,7 @@ public class Main {
 			}
 		}
 		
-		System.out.printf("Média: %d", total/count);
+		System.out.printf("Media: %d", total/count);
 	}
 
 	private static void gerarDados(File file) throws IOException {
