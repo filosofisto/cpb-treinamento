@@ -22,14 +22,16 @@ public class Main {
 		pessoas.add(p);
 		pessoas.add(airton);
 		
-		ExportadorXML exportadorXML = new ExportadorXML();
+		ExportadorXML exportadorXML = 
+				new ExportadorXML();
 		
 		try {
-			String xml = exportadorXML.exportar(pessoas, "pessoas");
+			String xml = exportadorXML
+					.cabecalho()
+					.exportar(pessoas, "pessoas");
 			System.out.println(xml);
 		} catch (IllegalArgumentException | IllegalAccessException | NoSuchMethodException | SecurityException | InvocationTargetException e) {
 			e.printStackTrace();
 		}
-		
 	}
 }

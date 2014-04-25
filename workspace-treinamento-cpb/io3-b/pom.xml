@@ -12,14 +12,6 @@
 		<maven-compiler-plugin.version>2.0.2</maven-compiler-plugin.version>
 	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.javabasico</groupId>
-			<artifactId>leitura-teclado</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

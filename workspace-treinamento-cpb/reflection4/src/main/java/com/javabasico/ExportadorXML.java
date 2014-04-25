@@ -7,16 +7,25 @@ import java.util.List;
 
 public class ExportadorXML {
 
-	public String exportar(List<?> list, String rootElement) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		StringBuilder buf = new StringBuilder();
+	private StringBuilder buf;
+	
+	public ExportadorXML() {
+		buf = new StringBuilder();
+	}
+	
+	public ExportadorXML cabecalho() {
 		buf.append("<?xml version=\"1.0\"?>\n");
 		
+		return this;
+	}
+	
+	public String exportar(List<?> list, String rootElement) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		buf.append(
 			"<" + rootElement + ">\n"
 		);
 		
 		for (Object obj: list) {
-			buf.append(exportarObj(obj) + "\n");
+			buf.append(exportar(obj) + "\n");
 		}
 		
 		buf.append(
@@ -26,9 +35,12 @@ public class ExportadorXML {
 		return buf.toString();
 	}
 	
-	private String exportarObj(Object obj) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		StringBuilder buf = new StringBuilder();
-		
+	private String exportarObj(Object obj) 
+			throws NoSuchMethodException, 
+				SecurityException, 
+				IllegalAccessException, 
+				IllegalArgumentException, 
+				InvocationTargetException {
 		Class cls = obj.getClass();
 		
 		buf.append(
@@ -58,10 +70,11 @@ public class ExportadorXML {
 	}
 	
 	public String exportar(Object obj) 
-			throws IllegalArgumentException, IllegalAccessException, NoSuchMethodException, SecurityException, InvocationTargetException {
-		StringBuilder buf = new StringBuilder();
-		buf.append("<?xml version=\"1.0\"?>\n");
-		
+			throws IllegalArgumentException, 
+				IllegalAccessException, 
+				NoSuchMethodException, 
+				SecurityException, 
+				InvocationTargetException {
 		Class cls = obj.getClass();
 		
 		buf.append(
