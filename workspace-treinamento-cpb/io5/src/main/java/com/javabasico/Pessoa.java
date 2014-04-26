@@ -1,10 +1,10 @@
-package com.x25.logicajava;
+package com.javabasico;
 
 import java.io.Serializable;
 
 public class Pessoa implements Serializable {
 
-	private static final long serialVersionUID = -4359724068950145968L;
+	private static final long serialVersionUID = -6556432044645627956L;
 	
 	private String nome;
 

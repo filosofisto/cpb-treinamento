@@ -1,4 +1,4 @@
-package com.x25.logicajava;
+package com.javabasico;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,9 +10,10 @@ public class Projeto implements Serializable {
 	
 	private Pessoa gerente;
 	private List<Tarefa> tarefas;
-	private Equipe equipe;
+	//private Equipe equipe;
 	private transient String bla;
 	private String novoAttr;
+	private int novoInt;
 	
 	public Pessoa getGerente() {
 		return gerente;
@@ -30,12 +31,12 @@ public class Projeto implements Serializable {
 	public void setTarefas(List<Tarefa> tarefas) {
 		this.tarefas = tarefas;
 	}
-	public Equipe getEquipe() {
+	/*public Equipe getEquipe() {
 		return equipe;
 	}
 	public void setEquipe(Equipe equipe) {
 		this.equipe = equipe;
-	}
+	}*/
 	
 	public String toString() {
 		StringBuilder b = new StringBuilder();
@@ -46,7 +47,7 @@ public class Projeto implements Serializable {
 			b.append("\t" + t + "\n");
 		}
 		
-		b.append(getEquipe());
+		//b.append(getEquipe());
 		
 		return b.toString();
 	}
@@ -55,6 +56,12 @@ public class Projeto implements Serializable {
 	}
 	public void setNovoAttr(String novoAttr) {
 		this.novoAttr = novoAttr;
+	}
+	public int getNovoInt() {
+		return novoInt;
+	}
+	public void setNovoInt(int novoInt) {
+		this.novoInt = novoInt;
 	}
 	
 	

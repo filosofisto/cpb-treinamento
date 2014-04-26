@@ -1,4 +1,4 @@
-package com.x25.logicajava;
+package com.javabasico;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,9 +12,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			File file = new File("/tmp/xxx/project.dat");
+			File file = new File("/home/filosofisto/CPB/cpb-treinamento/workspace-treinamento-cpb/io5/project.obj");
 			
-			//persistProject(file);
+			if (!file.exists()) {
+				persistProject(file);
+			}
 			
 			Projeto p = loadProject(file);
 			
@@ -62,7 +64,7 @@ public class Main {
 		m5.setNome("Rodrigo");
 		equipe.getMembros().add(m5);
 
-		p.setEquipe(equipe);
+		//p.setEquipe(equipe);
 		
 		Tarefa t1 = new Tarefa();
 		t1.setId(1);

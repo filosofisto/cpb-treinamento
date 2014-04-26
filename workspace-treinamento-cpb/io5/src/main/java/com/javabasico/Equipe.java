@@ -1,4 +1,4 @@
-package com.x25.logicajava;
+package com.javabasico;
 
 import java.io.Serializable;
 import java.util.ArrayList;
