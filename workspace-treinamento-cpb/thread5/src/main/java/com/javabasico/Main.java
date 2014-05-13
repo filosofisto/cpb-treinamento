@@ -3,7 +3,7 @@ package com.javabasico;
 public class Main {
 
 	public static void main(String[] args) {
-		ConnectionPool pool = new ConnectionPool(2);
+		ConnectionPool pool = new ConnectionPool(4);
 		
 		ConnUse[] uses = new ConnUse[5];
 		

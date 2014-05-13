@@ -30,6 +30,11 @@ public class SearchThread extends Thread {
 				if (list.get(i).equals(x)) {
 					out.printf("Achei na posicao %d", i);
 					break;
+				} else {
+					if (item > x) {
+						out.printf("\tNao encontrei o item %d\n", x);
+						break;
+					}
 				}
 			}
 			
