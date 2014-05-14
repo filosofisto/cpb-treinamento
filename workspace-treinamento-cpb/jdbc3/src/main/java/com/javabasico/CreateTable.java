@@ -12,19 +12,13 @@ public class CreateTable {
 	private Connection conn;
 	
 	public boolean createPessoa() throws SQLException, ClassNotFoundException {
-		try {
-			if (!existPessoa()) {
-				createTablePessoa();
-				
-				return true;
-			}
+		if (!existPessoa()) {
+			createTablePessoa();
 			
-			return false;
-		} finally {
-			if (conn != null) {
-				conn.close();
-			}
+			return true;
 		}
+		
+		return false;
 	}
 	
 	private void createTablePessoa() throws SQLException, ClassNotFoundException {
@@ -63,7 +57,6 @@ public class CreateTable {
 			
 			return true;
 		} catch (Exception e) {
-			e.printStackTrace();
 			return false;
 		} finally {
 			try {

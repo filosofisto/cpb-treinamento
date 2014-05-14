@@ -4,7 +4,7 @@
 	<groupId>com.javabasico</groupId>
 	<artifactId>jdbc3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jdbc1</name>
+	<name>jdbc3</name>
 
 	<properties>
 		<jdk.version>1.7</jdk.version>
@@ -15,9 +15,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>${hsqldb.version}</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.30</version>
 		</dependency>
 	</dependencies>
 
