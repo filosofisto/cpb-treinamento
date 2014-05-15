@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>XSLApplierFilter</display-name>
+    <context-param>
+        <param-name>title</param-name>
+        <param-value>.: XSLApplierFilter :.</param-value>
+    </context-param>
+    <filter>
+        <filter-name>XSLAppliterFilter</filter-name>
+        <filter-class>curso.jee.web.filter.XSLApplierFilter</filter-class>
+        <init-param>
+            <param-name>xslConsulta</param-name>
+            <param-value>xsl/consulta.xsl</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>XSLAppliterFilter</filter-name>
+        <servlet-name>ControllerServlet</servlet-name>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>curso.jee.web.servlet.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

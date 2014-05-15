@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/exception-deploy">
+  <Logger className="org.apache.catalina.logger.FileLogger" prefix="ExceptionDeploy." suffix=".log" timestamp="true"/>
+</Context>

@@ -1,0 +1,34 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exception</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <h3>setStatus</h3>
+            <h5>setStatus é usado para indicar situação que não é ERRO</h5>
+            
+            <a href="status?status=SC_MOVED_PERMANENTLY">SC_MOVED_PERMANENTLY</a> <br>
+            <a href="status?status=SC_MOVED_TEMPORARILY">SC_MOVED_TEMPORARILY</a> <br>
+        </div>
+        <div>
+            <h3>sendError</h3>
+            <h5>setError é usado para indicar situação que de ERRO</h5>
+            <p>
+                Envia um erro ao client usando o código de erro especificado e
+                limpa o buffer. O servidor preservará os cookies e limpará ou
+                atualizará qualquer header necessário a página de erro.
+                Se uma página de erro estiver configurada ao código de erro
+                especificado o servidor retornará a página de erro.
+            </p>
+            <a href="error?status=SC_NOT_FOUND">SC_NOT_FOUND</a><br> 
+            <a href="error?status=SC_UNAUTHORIZED">SC_UNAUTHORIZED</a> <br>
+            <a href="error?status=SC_INTERNAL_SERVER_ERROR">SC_INTERNAL_SERVER_ERROR</a> 
+        </div>
+    </body>
+</html>

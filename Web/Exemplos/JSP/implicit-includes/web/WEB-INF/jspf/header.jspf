@@ -1,0 +1,1 @@
+<img src="<%=request.getContextPath()%>/img/header.gif"/>

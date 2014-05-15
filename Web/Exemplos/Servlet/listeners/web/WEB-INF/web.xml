@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>curso.web.listeners.AppListener</listener-class>
+    </listener>
+    <listener>
+        <description>ServletContextAttributeListener</description>
+        <listener-class>curso.web.listeners.AppAttrListener</listener-class>
+    </listener>
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>curso.web.listeners.SessionListener</listener-class>
+    </listener>
+    <listener>
+        <description>HttpSessionAttributeListener</description>
+        <listener-class>curso.web.listeners.SessionAttrListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>Listener</servlet-name>
+        <servlet-class>curso.web.servlet.ListenersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Listener</servlet-name>
+        <url-pattern>/listener</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>
+            index.jsp
+        </welcome-file>
+        <welcome-file>
+            index.html
+        </welcome-file>
+        <welcome-file>
+            index.htm
+        </welcome-file>
+    </welcome-file-list>
+</web-app>

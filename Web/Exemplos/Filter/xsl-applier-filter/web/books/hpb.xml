@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books author="Helena Petrovna Blavatsk">
+    <book title="A Doutrina Secreta Vol. I"/>
+    <book title="A Doutrina Secreta Vol. II"/>
+    <book title="A Doutrina Secreta Vol. III"/>
+    <book title="A Doutrina Secreta Vol. IV"/>
+    <book title="A Doutrina Secreta Vol. V"/>
+    <book title="A Doutrina Secreta Vol. VI"/>
+    <book title="Isis Sem Veu Vol. I"/>
+    <book title="Isis Sem Veu Vol. II"/>
+    <book title="Isis Sem Veu Vol. III"/>
+    <book title="Isis Sem Veu Vol. IV"/>
+</books>

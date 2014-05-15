@@ -1,0 +1,130 @@
+/* LINK PADRAO */
+
+body
+{
+    	font-family		:verdana;
+	font-style		:normal;
+	font-weight		:normal;
+	font-size		:10px;
+        color                   :#666;
+}
+
+
+a:link
+{
+	font-weight		:normal;
+	font-size		:12px;
+	color			:#ff6d00;
+	font-style		:normal;
+	font-family		:arial;
+	text-decoration	:none;
+}
+
+a:visited
+{
+	font-weight		:normal;
+	font-size		:12px;
+	color			:#ff6d00;
+	font-style		:normal;
+	font-family		:arial;
+	text-decoration	:none;		
+}
+
+a:active
+{
+	font-weight		:normal;
+	font-size		:12px;
+	color			:#ff6d00;
+	font-style		:normal;
+	font-family		:arial;
+	text-decoration	:none;
+}
+
+a:hover
+{	
+	font-weight		:normal;
+	font-size		:12px;
+	color			:#ff6d00;
+	font-style		:normal;
+	font-family		:arial;
+	text-decoration	:underline;
+}
+
+h1
+{	
+	margin-top	:5px;
+	margin-bottom	:5px;
+        padding-left    :10px;
+        padding-top     :5px;
+        padding-bottom  :5px;
+	font-family	:Verdana;
+	font-weight	:bold;
+	font-size	:14pt;
+	color		:#FF9933;
+        border-top      :#414244 1px dashed;
+        border-bottom   :#414244 1px dashed;
+}
+
+.labelNormal
+{
+	font-family	:Arial;
+	font-size	:12px;
+	font-weight	:normal;
+	color		:#314E94
+}
+
+.labelNormalMin
+{
+	font-family	:Verdana;
+	font-size	:10px;
+	font-weight	:normal;
+	color		:#314E94
+}
+
+.labelBold
+{
+	font-family	:Arial;
+	font-size	:12px;
+	font-weight	:bold;
+	color		:#314E94;
+}
+
+.labelBoldMin
+{
+	font-family	:Verdana;
+	font-size	:10px;
+	font-weight	:bold;
+	color		:#314E94;
+}
+
+.labelMensagem
+{
+	font-family	:Arial;
+	font-size	:11px;
+	font-weight	:bold;
+	color		:#E97117;
+}
+
+.labelLegenda
+{
+	font-family	:Arial;
+	font-size	:10px;
+	font-weight	:normal;
+	color		:#7F7D7D;
+}
+
+.valorNormal
+{
+	font-family	:Arial;
+	font-size	:11px;
+	font-weight	:normal;
+	color		:#414244;
+}
+
+.valorBold
+{
+	font-family	:Arial;
+	font-size	:11px;
+	font-weight	:bold;
+	color		:#414244
+}

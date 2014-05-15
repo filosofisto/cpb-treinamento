@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/output-stream">
+  <Logger className="org.apache.catalina.logger.FileLogger" prefix="OutputStream." suffix=".log" timestamp="true"/>
+</Context>

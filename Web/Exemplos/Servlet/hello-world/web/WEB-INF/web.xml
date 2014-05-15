@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>suporte@x25.com.br</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>curso.web.servlet.HelloServlet</servlet-class>
+        <init-param>
+            <description>Esta é a mensagem do servlet</description>
+            <param-name>mensagem</param-name>
+            <param-value>Hello World</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/HelloServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>
+            index.jsp
+        </welcome-file>
+    </welcome-file-list>
+</web-app>
