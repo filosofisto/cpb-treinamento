@@ -2,7 +2,6 @@ package com.javabasico;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 public class Main {
 
@@ -68,7 +67,7 @@ public class Main {
 		
 		String cpf = t.read("CPF");
 		
-		dao.excluir(cpf);
+		//dao.excluir(cpf);
 		
 		dao.closeConnection();
 	}
@@ -79,11 +78,11 @@ public class Main {
 		
 		System.out.println("Listagem de Pessoas");
 		
-		List<Pessoa> list = dao.listar();
+		/*List<Pessoa> list = dao.listar();
 		
 		for (Pessoa p: list) {
 			System.out.println(p);
-		}
+		}*/
 		
 		dao.closeConnection();
 	}
@@ -97,11 +96,11 @@ public class Main {
 		
 		String cpf = t.read("CPF");
 		
-		Pessoa p = dao.obter(cpf);
+		/*Pessoa p = dao.obter(cpf);
 		
 		if (p != null) {
 			System.out.println(p);
-		}
+		}*/
 		
 		dao.closeConnection();
 	}
