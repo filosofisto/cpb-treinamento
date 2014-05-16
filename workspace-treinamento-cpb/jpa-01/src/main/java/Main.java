@@ -21,7 +21,6 @@ public class Main {
 
 			Message m1 = new Message();
 			m1.setText("Texto Message 1");
-
 			entityManager.persist(m1);
 
 			Message m2 = new Message();
@@ -42,8 +41,15 @@ public class Main {
 			for (Message m : resultList) {
 				System.out.println(m);
 			}
+			
+			/*Message x = new Message();
+			x.setId(7L);
+			
+			x = entityManager.merge(x);
+			
+			x.setText("Bingo");*/
 
-			Message m = entityManager.find(Message.class, new Long(1));
+			Message m = entityManager.find(Message.class, 1L);
 			System.out.println(m.getText());
 			m.setText(m.getText() + "***");
 

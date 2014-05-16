@@ -4,21 +4,22 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="MESSAGE")
+@Table(name="TB001_MESSAGE")
 public class Message {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_MESSAGE")
 	private Long id;
 	
-	@Column(name="TEXT", nullable=false)
+	@Column(name="TEXT_MESSAGE", nullable=false)
 	private String text;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
