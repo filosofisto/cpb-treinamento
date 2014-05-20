@@ -10,7 +10,7 @@ public class Connector {
 			throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		String url = "jdbc:mysql://localhost/cpb-treinamento";
-		return DriverManager.getConnection(url, "root", "socrates");
+		String url = "jdbc:mysql://localhost/cpb_treinamento";
+		return DriverManager.getConnection(url, "root", "");
 	}
 }

@@ -1,6 +1,5 @@
 package com.javabasico;
 
-import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -11,8 +10,8 @@ public class Main {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String url = "jdbc:mysql://localhost/cpb-treinamento";
-			Connection c = DriverManager.getConnection(url, "root", "socrates");
+			String url = "jdbc:mysql://localhost/cpb_treinamento";
+			Connection c = DriverManager.getConnection(url, "root", "");
 			
 			System.out.println("Conexao realizada com sucesso");
 		} catch (ClassNotFoundException e) {

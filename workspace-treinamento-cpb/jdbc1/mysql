@@ -1,0 +1,12 @@
+No Linux
+===========================
+1) Instala o MySQL
+yum install mysql-server mysql
+
+2) Inicia o servico
+systemctl start mysqld.service
+
+3) Criar banco de dados
+mysql
+
+mysql>create database cpb_treinamento;
