@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <description>Trabalhando com ServletContext</description>
+    <display-name>ContexInfo</display-name>
+    <context-param>
+        <description>Classe do driver de conexão Oracle</description>
+        <param-name>driverDB</param-name>
+        <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    </context-param>
+    <context-param>
+        <description>URL de conexão com o banco de dados</description>
+        <param-name>urlDB</param-name>
+        <param-value>jdbc:oracle:thin:@devsun:1521:DBFSW</param-value>
+    </context-param>
+    <context-param>
+        <description>Usuário para conectar no banco de dados</description>
+        <param-name>userDB</param-name>
+        <param-value>ouv</param-value>
+    </context-param>
+    <context-param>
+        <description>Senha do usuário para conexão no banco de dados</description>
+        <param-name>passwordDB</param-name>
+        <param-value>ouv</param-value>
+    </context-param>
+  
+    <servlet>
+        <servlet-name>ContextInfo</servlet-name>
+        <servlet-class>curso.web.servlet.ContextInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextInfo</servlet-name>
+        <url-pattern>/ctxinfo</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>
+            index.jsp
+        </welcome-file>
+        <welcome-file>
+            index.html
+        </welcome-file>
+        <welcome-file>
+            index.htm
+        </welcome-file>
+    </welcome-file-list>
+</web-app>

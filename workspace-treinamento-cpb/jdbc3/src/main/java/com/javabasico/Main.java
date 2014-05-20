@@ -29,7 +29,8 @@ public class Main {
 			System.out.println("1. Incluir Pessoas");
 			System.out.println("2. Listar Pessoas");
 			System.out.println("3. Excluir Pessoa");
-			System.out.println("4. Sair da Aplicacao");
+			System.out.println("4. Obter Pessoa");
+			System.out.println("5. Sair da Aplicacao");
 			System.out.println("==============================");
 			
 			String opcao = t.read(">");
@@ -41,6 +42,8 @@ public class Main {
 			} else if (opcao.equals("3")) {
 				delete();
 			} else if (opcao.equals("4")) {
+				read();
+			} else if (opcao.equals("5")) {
 				System.out.println("By ;P");
 				break;
 			} else {
@@ -51,7 +54,7 @@ public class Main {
 	}
 
 	private static void clearConsole() {
-		for (int i = 1; i < 15; i++) {
+		for (int i = 1; i < 5; i++) {
 			System.out.println();
 		}
 	}
@@ -79,6 +82,24 @@ public class Main {
 		List<Pessoa> list = dao.listar();
 		
 		for (Pessoa p: list) {
+			System.out.println(p);
+		}
+		
+		dao.closeConnection();
+	}
+	
+	private static void read() throws ClassNotFoundException, SQLException, IOException {
+		Teclado t = new Teclado();
+		Connector connector = new Connector();
+		PessoaDAO dao = new PessoaDAO(connector.makeConnection());
+		
+		System.out.println("Informe o CPF");
+		
+		String cpf = t.read("CPF");
+		
+		Pessoa p = dao.obter(cpf);
+		
+		if (p != null) {
 			System.out.println(p);
 		}
 		

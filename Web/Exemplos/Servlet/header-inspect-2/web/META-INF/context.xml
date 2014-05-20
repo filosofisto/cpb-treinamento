@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/header-inspect-2">
+  <Logger className="org.apache.catalina.logger.FileLogger" prefix="HeaderInspect." suffix=".log" timestamp="true"/>
+</Context>

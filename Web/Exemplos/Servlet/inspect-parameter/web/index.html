@@ -1,0 +1,25 @@
+<html>
+    <head><title>InspectParameter</title></head>
+    <body>
+        <h3>Menu</h3>
+        
+        <a href="inspectparam?param=bingo">Link</a> 
+        
+        <form action="inspectparam" method="POST">
+            Nome<br> <input type="text" name="nome"/><br>
+            Cidade<br> 
+            <select name="cidade">
+                <option value="1">Brasilia</option>
+                <option value="2">Florianopolis</option>
+                <option value="3">Porto Alegre</option>
+                <option value="4">Sao Paulo</option>
+                <option value="5">Rio de Janeiro</option>
+            </select><br>
+            Sexo<br>
+            <input type="radio" name="sexo" value="M"/>Masculino
+            <input type="radio" name="sexo" value="F"/>Feminino
+            <br>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </body>
+</html>

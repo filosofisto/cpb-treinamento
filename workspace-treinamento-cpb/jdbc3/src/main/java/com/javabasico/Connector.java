@@ -11,6 +11,10 @@ public class Connector {
 		Class.forName("com.mysql.jdbc.Driver");
 		
 		String url = "jdbc:mysql://localhost/cpb_treinamento";
+<<<<<<< HEAD
 		return DriverManager.getConnection(url, "root", "");
+=======
+		return DriverManager.getConnection(url, "root", "socrates");
+>>>>>>> b46103c03314d1db0249a76854290cefa3baaaef
 	}
 }
