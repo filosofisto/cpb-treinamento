@@ -4,15 +4,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TELEFONE")
+@Table(name="TB003_TELEFONE")
 public class Telefone {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_TELEFONE")
 	private Long id;
 	
 	@Column(name="PAIS")
@@ -23,6 +25,18 @@ public class Telefone {
 	
 	@Column(name="TELEFONE", nullable=false)
 	private Long telefone;
+	
+	@ManyToOne
+	@JoinColumn(name="ID_PESSOA", nullable=false)
+	private Pessoa pessoa;
+	
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
 
 	public Long getId() {
 		return id;
@@ -56,6 +70,14 @@ public class Telefone {
 		this.telefone = telefone;
 	}
 	
+	/*public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}*/
+
 	@Override
 	public String toString() {
 		return getPais() + " " + getArea() + " " + getTelefone();

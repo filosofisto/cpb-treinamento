@@ -21,22 +21,29 @@ public class Main {
 		try {
 			transaction.begin();
 			
-			Telefone tel = new Telefone();
-			tel.setArea(61);
-			tel.setTelefone(30273045L);
-			
-			entityManager.persist(tel);
-			
-			Telefone cel = new Telefone();
-			cel.setArea(61);
-			cel.setTelefone(99801234L);
-			
-			entityManager.persist(cel);
-			
 			Pessoa p = new Pessoa();
 			p.setNome("Jose da Silva");
 			
-			Endereco e = new Endereco();
+			entityManager.persist(p);
+			
+			Telefone tel = new Telefone();
+			tel.setPessoa(p);
+			tel.setPais(55);
+			tel.setArea(61);
+			tel.setTelefone(30273045L);
+			
+			//entityManager.persist(tel);
+			
+			Telefone cel = new Telefone();
+			tel.setPessoa(p);
+			tel.setPais(55);
+			cel.setArea(61);
+			cel.setTelefone(99801234L);
+			
+			//entityManager.persist(cel);
+			
+			
+			/*Endereco e = new Endereco();
 			e.setRua("Araucaria");
 			e.setCidade("Brasilia");
 			e.setEstado("DF");
@@ -44,14 +51,17 @@ public class Main {
 			
 			entityManager.persist(e);
 			
-			p.setEndereco(e);
+			p.setEndereco(e);*/
 			
 			List<Telefone> listTels = new ArrayList<Telefone>();
 			listTels.add(tel);
 			listTels.add(cel);
 			p.setTelefones(listTels);
 			
-			entityManager.persist(p);
+			/*entityManager.persist(p);
+			
+			cel.setPessoa(p);
+			tel.setPessoa(p);*/
 			
 			transaction.commit();
 		} catch (Exception e) {

@@ -1,7 +1,10 @@
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import curso.jpa.entity.Funcionario;
 import curso.jpa.entity.Pessoa;
@@ -27,6 +30,18 @@ public class Main {
 			f.setSalario(10000.0);
 			
 			entityManager.persist(f);
+			
+			Query query = entityManager
+					.createQuery("select p from Pessoa p");
+			List<Pessoa> pessoas = query.getResultList();
+			
+			System.out.println("Pessoas: " + pessoas.size());
+			
+			Query queryF = entityManager
+					.createQuery("select f from Funcionario f");
+			List<Funcionario> funcionarios = queryF.getResultList();
+			
+			System.out.println("Funcionarios: " + funcionarios.size());
 			
 			transaction.commit();
 		} catch (Exception e) {

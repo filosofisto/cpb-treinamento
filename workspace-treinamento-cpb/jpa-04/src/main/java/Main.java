@@ -44,9 +44,16 @@ public class Main {
 			transaction.begin();
 			
 			//Endereco orfao
-			Pessoa p = entityManager.find(Pessoa.class, new Long(1));
+			/*Pessoa p = entityManager.find(Pessoa.class, new Long(1));
+			p.setEndereco(null);*/
+			Pessoa p = new Pessoa();
+			p.setId(1L);
+			p.setNome("Jose da Silva");
 			p.setEndereco(null);
-			entityManager.persist(p);
+			
+			entityManager.merge(p);
+			
+			//entityManager.persist(p);
 			
 			transaction.commit();
 		} catch (Exception e) {

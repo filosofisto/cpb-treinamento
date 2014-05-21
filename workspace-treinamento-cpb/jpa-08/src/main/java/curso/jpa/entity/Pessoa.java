@@ -9,13 +9,13 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PESSOA")
+@Table(name="TB001_PESSOA")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class Pessoa {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_PESSOA")
 	private Long id;
 	
 	@Column(name="NOME", nullable=false)

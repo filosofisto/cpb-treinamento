@@ -11,19 +11,19 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PESSOA")
+@Table(name="TB001_PESSOA")
 public class Pessoa {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_PESSOA")
 	private Long id;
 	
 	@Column(name="NOME", nullable=false)
 	private String nome;
 	
-	//@OneToOne(fetch=FetchType.LAZY, orphanRemoval=true, cascade={CascadeType.ALL})
-	@OneToOne(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
+	@OneToOne(fetch=FetchType.LAZY, orphanRemoval=true, cascade={CascadeType.ALL})
+	//@OneToOne(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
 	@JoinColumn(name="ENDERECO_ID")
 	private Endereco endereco;
 

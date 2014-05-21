@@ -12,22 +12,22 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PESSOA")
+@Table(name="TB001_PESSOA")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="TP_PESSOA", discriminatorType=DiscriminatorType.CHAR)
+@DiscriminatorColumn(name="TP_PESSOA", discriminatorType=DiscriminatorType.STRING)
 @DiscriminatorValue("P")
 public class Pessoa {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_PESSOA")
 	private Long id;
 	
 	@Column(name="NOME", nullable=false)
 	private String nome;
 	
 	@Column(name="TP_PESSOA", length=1, nullable=false, insertable=false, updatable=false)
-	private Character tipoPessoa;
+	private String tipoPessoa;
 	
 	public Long getId() {
 		return id;
@@ -45,15 +45,15 @@ public class Pessoa {
 		this.nome = nome;
 	}
 	
-	public Character getTipoPessoa() {
+	public String getTipoPessoa() {
 		return tipoPessoa;
 	}
 	
-	public void setTipoPessoa(Character tipoPessoa) {
+	public void setTipoPessoa(String tipoPessoa) {
 		this.tipoPessoa = tipoPessoa;
 	}
 	
 	public boolean isPessoa() {
-		return getTipoPessoa() == 'P';
+		return getTipoPessoa().equals("P");
 	}
 }

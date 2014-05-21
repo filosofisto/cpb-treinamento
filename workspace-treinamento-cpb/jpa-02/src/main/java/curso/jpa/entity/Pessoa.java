@@ -10,20 +10,20 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PESSOA")
+@Table(name="TB002_PESSOA")
 public class Pessoa {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_PESSOA")
 	private Long id;
 	
-	@Column(name="NOME", nullable=false)
+	@Column(name="NOME", nullable=false, length=50)
 	private String nome;
 	
-	@OneToOne(fetch=FetchType.LAZY)
-	//@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="ENDERECO_ID")
+	//@OneToOne(fetch=FetchType.LAZY)
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="ID_ENDERECO")
 	private Endereco endereco;
 
 	public Long getId() {

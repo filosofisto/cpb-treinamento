@@ -11,12 +11,12 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PESSOA")
+@Table(name="TB001_PESSOA")
 public class Pessoa {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_PESSOA")
 	private Long id;
 	
 	@Column(name="NOME", nullable=false)
@@ -24,7 +24,7 @@ public class Pessoa {
 	
 	@OneToOne(fetch=FetchType.LAZY, cascade={CascadeType.REMOVE})
 	//@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="ENDERECO_ID")
+	@JoinColumn(name="ID_ENDERECO")
 	private Endereco endereco;
 
 	public Long getId() {

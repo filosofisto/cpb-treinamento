@@ -14,22 +14,22 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PESSOA")
+@Table(name="TB001_PESSOA")
 public class Pessoa {
 
 	@Id 
 	@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_PESSOA")
 	private Long id;
 	
 	@Column(name="NOME", nullable=false)
 	private String nome;
 	
-	@OneToMany(fetch=FetchType.LAZY, orphanRemoval=true, cascade={CascadeType.ALL})
+	@OneToMany(targetEntity=Telefone.class, cascade=CascadeType.ALL, mappedBy="pessoa")
 	private List<Telefone> telefones;
 	
 	@OneToOne(fetch=FetchType.LAZY, orphanRemoval=true, cascade={CascadeType.ALL})
-	@JoinColumn(name="ENDERECO_ID")
+	@JoinColumn(name="ID_ENDERECO")
 	private Endereco endereco;
 
 	public Long getId() {
