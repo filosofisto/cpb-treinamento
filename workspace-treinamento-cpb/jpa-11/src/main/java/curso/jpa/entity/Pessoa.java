@@ -10,8 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,13 +26,14 @@ public class Pessoa {
 	@Column(name="NOME", nullable=false)
 	private String nome;
 	
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="pessoa", orphanRemoval=true)
+	@ManyToMany(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
+	@JoinTable(
+		name="TB003_PESSOA_TELEFONE", 
+		joinColumns=@JoinColumn(name="ID_PESSOA"), 
+		inverseJoinColumns=@JoinColumn(name="ID_TELEFONE")
+	)
 	private List<Telefone> telefones = new ArrayList<Telefone>();
 	
-	@OneToOne(fetch=FetchType.LAZY, orphanRemoval=true, cascade={CascadeType.ALL})
-	@JoinColumn(name="ID_ENDERECO")
-	private Endereco endereco;
-
 	public Long getId() {
 		return id;
 	}
@@ -47,14 +48,6 @@ public class Pessoa {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
 	}
 
 	public List<Telefone> getTelefones() {

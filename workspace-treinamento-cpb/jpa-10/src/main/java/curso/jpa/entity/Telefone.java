@@ -1,15 +1,17 @@
 package curso.jpa.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TB003_TELEFONE")
+@Table(name="TB002_TELEFONE")
 public class Telefone {
 
 	@Id 
@@ -26,18 +28,14 @@ public class Telefone {
 	@Column(name="TELEFONE", nullable=false)
 	private Long telefone;
 	
-	@ManyToOne
-	@JoinColumn(name="ID_PESSOA")
-	private Pessoa pessoa;
+	@ManyToMany(mappedBy="telefones", fetch=FetchType.LAZY)
+	/*@JoinTable(
+		name = "TB003_PESSOA_TELEFONE", 
+		joinColumns = @JoinColumn(name="ID_PESSOA"), 
+		inverseJoinColumns=@JoinColumn(name="ID_TELEFONE")
+	)*/
+	private List<Pessoa> pessoas;
 	
-	public Pessoa getPessoa() {
-		return pessoa;
-	}
-
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
-	}
-
 	public Long getId() {
 		return id;
 	}

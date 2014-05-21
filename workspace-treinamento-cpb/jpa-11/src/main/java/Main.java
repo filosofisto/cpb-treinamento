@@ -3,7 +3,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import curso.jpa.entity.Endereco;
 import curso.jpa.entity.Pessoa;
 import curso.jpa.entity.Telefone;
 
@@ -18,34 +17,31 @@ public class Main {
 		try {
 			transaction.begin();
 			
-			Pessoa p = new Pessoa();
-			p.setNome("Jose da Silva");
+			Pessoa joao = new Pessoa();
+			joao.setNome("Jose da Silva");
 			
 			Telefone tel = new Telefone();
-			tel.setPessoa(p);
 			tel.setPais(55);
 			tel.setArea(61);
 			tel.setTelefone(30273045L);
 			
-			p.getTelefones().add(tel);
+			joao.getTelefones().add(tel);
 			
 			Telefone cel = new Telefone();
-			cel.setPessoa(p);
 			tel.setPais(55);
 			cel.setArea(61);
 			cel.setTelefone(99801234L);
 			
-			p.getTelefones().add(cel);
+			joao.getTelefones().add(cel);
 
-			Endereco e = new Endereco();
-			e.setRua("Araucaria");
-			e.setCidade("Brasilia");
-			e.setEstado("DF");
-			e.setCep("88000000");
+			entityManager.persist(joao);
 			
-			p.setEndereco(e);
+			Pessoa esposaJoao = new Pessoa();
+			esposaJoao.setNome("Maria da Silva");
 			
-			entityManager.persist(p);
+			esposaJoao.getTelefones().add(tel);
+			
+			entityManager.persist(esposaJoao);
 			
 			transaction.commit();
 		} catch (Exception e) {
@@ -55,7 +51,7 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		try {
+		/*try {
 			transaction.begin();
 			
 			//Endereco orfao
@@ -70,6 +66,6 @@ public class Main {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		}
+		}*/
 	}
 }
