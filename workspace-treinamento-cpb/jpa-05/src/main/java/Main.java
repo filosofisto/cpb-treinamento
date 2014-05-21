@@ -62,7 +62,6 @@ public class Main {
 			Pessoa p = entityManager.find(Pessoa.class, new Long(1));
 			p.setEndereco(null);
 			p.getTelefones().clear();
-			//entityManager.persist(p);
 			
 			transaction.commit();
 		} catch (Exception e) {

@@ -29,11 +29,6 @@ public class Telefone {
 	private Long telefone;
 	
 	@ManyToMany(mappedBy="telefones", fetch=FetchType.LAZY)
-	/*@JoinTable(
-		name = "TB003_PESSOA_TELEFONE", 
-		joinColumns = @JoinColumn(name="ID_PESSOA"), 
-		inverseJoinColumns=@JoinColumn(name="ID_TELEFONE")
-	)*/
 	private List<Pessoa> pessoas;
 	
 	public Long getId() {

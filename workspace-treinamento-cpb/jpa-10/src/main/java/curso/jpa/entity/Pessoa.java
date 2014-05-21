@@ -26,7 +26,10 @@ public class Pessoa {
 	@Column(name="NOME", nullable=false)
 	private String nome;
 	
-	@ManyToMany(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
+	@ManyToMany(
+			fetch=FetchType.LAZY, 
+			cascade={CascadeType.ALL}
+	)
 	@JoinTable(
 		name="TB003_PESSOA_TELEFONE", 
 		joinColumns=@JoinColumn(name="ID_PESSOA"), 
