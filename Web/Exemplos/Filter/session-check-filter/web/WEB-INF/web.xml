@@ -6,7 +6,7 @@
     </context-param>
     <filter>
         <filter-name>sessionChecker</filter-name>
-        <filter-class>curso.jee.web.filter.SessionCheckFilter</filter-class>
+        <filter-class>curso.web.filter.SessionCheckFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>sessionChecker</filter-name>
@@ -18,12 +18,12 @@
     </filter-mapping>
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>curso.jee.web.servlet.LoginServlet</servlet-class>
+        <servlet-class>curso.web.servlet.LoginServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
         </servlet>
     <servlet>
         <servlet-name>ControllerServlet</servlet-name>
-        <servlet-class>curso.jee.web.servlet.ControllerServlet</servlet-class>
+        <servlet-class>curso.web.servlet.ControllerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>

@@ -4,12 +4,12 @@
     <xsl:output method="html"/>
 
     <xsl:template match="books">
-        <h1>Livros de <xsl:value-of select="@author"/></h1>
+        <h3>Livros de <xsl:value-of select="@author"/></h3>
         <xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="book">
-        <h3>Título: <xsl:value-of select="@title"/></h3>
+        <h4 style="color:red"><strong>Título:</strong> <xsl:value-of select="@title"/></h4>
     </xsl:template>
     
 </xsl:stylesheet>

@@ -41,7 +41,7 @@ public class XSLApplierFilter implements Filter {
         
         TransformerFactory factory = TransformerFactory.newInstance();
         InputStream is = filterConfig.getServletContext().
-                getResourceAsStream(xsl);
+                getResourceAsStream("/"+xsl);
         
         try {
             transformer = factory.newTransformer(new StreamSource(is));

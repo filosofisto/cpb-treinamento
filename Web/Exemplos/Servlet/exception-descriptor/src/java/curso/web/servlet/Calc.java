@@ -24,7 +24,8 @@ public class Calc extends HttpServlet {
      * @param response servlet response
      */
     protected void processRequest(HttpServletRequest request, 
-            HttpServletResponse response) throws ServletException, IOException {
+            HttpServletResponse response) 
+            throws ServletException, IOException {
         String numerador = request.getParameter("numerador");    
         String denominador = request.getParameter("denominador");
         
