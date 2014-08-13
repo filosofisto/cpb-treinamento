@@ -6,8 +6,8 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import curso.jpa.entity.Pessoa;
-import curso.jpa.entity.Telefone;
+import curso.jpa.entity.Estado;
+import curso.jpa.entity.Regional;
 
 public class Main {
 
@@ -20,31 +20,25 @@ public class Main {
 		try {
 			transaction.begin();
 			
-			Pessoa joao = new Pessoa();
-			joao.setNome("Jose da Silva");
+			Estado poa = new Estado();
+			poa.setNome("Porto Alegre");
 			
-			Telefone tel = new Telefone();
-			tel.setPais(55);
-			tel.setArea(61);
-			tel.setTelefone(30273045L);
+			entityManager.persist(poa);
 			
-			joao.getTelefones().add(tel);
+			Estado sc = new Estado();
+			sc.setNome("Santa Catarina");
 			
-			Telefone cel = new Telefone();
-			tel.setPais(55);
-			cel.setArea(61);
-			cel.setTelefone(99801234L);
+			entityManager.persist(sc);
 			
-			joao.getTelefones().add(cel);
+			Regional r = new Regional();
+			r.setNome("Regiao 01");
+			r.getEstados().add(poa);
+			r.getEstados().add(sc);
+			
+			poa.setRegional(r);
+			sc.setRegional(r);
 
-			entityManager.persist(joao);
-			
-			Pessoa esposaJoao = new Pessoa();
-			esposaJoao.setNome("Maria da Silva");
-			
-			esposaJoao.getTelefones().add(tel);
-			
-			entityManager.persist(esposaJoao);
+			entityManager.persist(r);
 			
 			transaction.commit();
 		} catch (Exception e) {
@@ -57,16 +51,11 @@ public class Main {
 		try {
 			transaction.begin();
 			
-			Query query = entityManager.createQuery("select p from Pessoa p");
-			@SuppressWarnings("unchecked")
-			List<Pessoa> pessoas = query.getResultList();
+			Query query = entityManager.createQuery("select r from Regional r");
+			Regional regional = (Regional) query.getResultList().iterator().next();
 			
-			for (Pessoa p: pessoas) {
-				System.out.println(p.getNome());
-				
-				for (Telefone t: p.getTelefones()) {
-					System.out.println("\t"+t.getTelefone());
-				}
+			for (Estado est: regional.getEstados()) {
+				System.out.println(est.getNome());
 			}
 			
 			transaction.commit();
