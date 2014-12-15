@@ -16,14 +16,18 @@ public class Main {
 		EntityManagerFactory factory = Persistence
 				.createEntityManagerFactory("jpa-01");
 
-		//for (int i = 0; i < 10; i++) {
+		//ATUALIZACAO DE 1 REGISTRO
+		execQuery(factory);
+		
+		updateLine(factory, 1L);
+		//insertLine(factory);
+		
+		execQuery(factory);
+	
+		//CONSULTA APENAS
+		/*for (int i = 0; i < 10; i++) {
 			execQuery(factory);
-			
-			//updateLine(factory, 1L);
-			insertLine(factory);
-			
-			execQuery(factory);
-		//}
+		}*/	
 	}
 	
 	private static void insertLine(EntityManagerFactory factory) {
@@ -55,7 +59,7 @@ public class Main {
 			transaction.begin();
 			
 			Evento evt = entityManager.find(Evento.class, id);
-			evt.setNome("**ALTERADO**");
+			evt.setNome("**ALTERADO***");
 			
 			transaction.commit();
 		} catch (Exception e) {
