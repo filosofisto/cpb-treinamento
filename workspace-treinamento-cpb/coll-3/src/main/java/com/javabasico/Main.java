@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class Main {
 	
 	public static void main(String[] args) {
-		Set<Veiculo> set = new TreeSet<Veiculo>();
+		Set<Veiculo> set = new TreeSet();
 		
 		populate(set);
 		show(set);

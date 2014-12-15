@@ -60,8 +60,9 @@ public class Main {
 			
 			//Endereco orfao
 			Pessoa p = entityManager.find(Pessoa.class, new Long(1));
-			p.setEndereco(null);
-			p.getTelefones().clear();
+			/*p.setEndereco(null);
+			p.getTelefones().clear();*/
+			entityManager.remove(p);
 			
 			transaction.commit();
 		} catch (Exception e) {

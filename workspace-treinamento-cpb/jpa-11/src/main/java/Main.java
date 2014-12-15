@@ -4,8 +4,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import curso.jpa.entity.Confederacao;
-import curso.jpa.entity.Modalidade;
+import curso.jpa.entity.Evento;
+import curso.jpa.entity.Material;
 
 public class Main {
 
@@ -18,16 +18,32 @@ public class Main {
 		try {
 			transaction.begin();
 			
-			Modalidade m1 = new Modalidade();
-			m1.setNome("Atletismo");
+			Evento evento = new Evento();
+			evento.setNome("Evento 1");
+			
+			entityManager.persist(evento);
+			
+			Material m1 = new Material();
+			m1.setDescricao("Material 01");
+			m1.setQuantidade(10f);
+			m1.setReferencia("Ref 01");
+			m1.setValorUnitario(15.02f);
+			m1.setEvento(evento);
 			
 			entityManager.persist(m1);
 			
-			Modalidade m2 = new Modalidade();
-			m2.setNome("Natacao");
+			Material m2 = new Material();
+			m2.setDescricao("Material 01");
+			m2.setQuantidade(10f);
+			m2.setReferencia("Ref 01");
+			m2.setValorUnitario(15.02f);
+			m2.setEvento(evento);
 			
 			entityManager.persist(m2);
 			
+			evento.getMateriais().add(m1);
+			evento.getMateriais().add(m2);
+			
 			transaction.commit();
 			
 		} catch (Exception e) {
@@ -35,50 +51,6 @@ public class Main {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		}
-		
-		try {
-			transaction.begin();
-			
-			Confederacao c = new Confederacao();
-			c.setNome("C1");
-			
-			Modalidade m1 = entityManager.find(Modalidade.class, 1L);
-			m1.setConfederacao(c);
-			
-			c.getModalidades().add(m1);
-			
-			Modalidade m2 = entityManager.find(Modalidade.class, 2L);
-			m2.setConfederacao(c);
-			
-			c.getModalidades().add(m2);
-
-			entityManager.persist(c);
-			
-			transaction.commit();
-		} catch (Exception e) {
-			if (transaction.isActive()) {
-				transaction.rollback();
-			}
-			e.printStackTrace();
-		}
-
-		try {
-			transaction.begin();
-			
-			Confederacao c = entityManager.find(Confederacao.class, 1L);
-
-			for (Modalidade m: c.getModalidades()) {
-				m.setConfederacao(null);
-			}
-
-			c.getModalidades().clear();
-			
-			transaction.commit();
-		} catch (Exception e) {
-			if (transaction.isActive()) {
-				transaction.rollback();
-			}
 		}
 	}
 }
