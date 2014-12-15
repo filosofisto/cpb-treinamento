@@ -17,17 +17,17 @@ public class Main {
 				.createEntityManagerFactory("jpa-01");
 
 		//ATUALIZACAO DE 1 REGISTRO
-		execQuery(factory);
+		/*execQuery(factory);
 		
 		updateLine(factory, 1L);
 		//insertLine(factory);
 		
-		execQuery(factory);
+		execQuery(factory);*/
 	
 		//CONSULTA APENAS
-		/*for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 10; i++) {
 			execQuery(factory);
-		}*/	
+		}	
 	}
 	
 	private static void insertLine(EntityManagerFactory factory) {

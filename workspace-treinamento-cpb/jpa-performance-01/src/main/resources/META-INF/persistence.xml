@@ -22,8 +22,8 @@
 			<property name="hibernate.c3p0.timeout" value="300" />
 			<property name="hibernate.c3p0.max_statements" value="50" />
 			<property name="hibernate.c3p0.idle_test_period" value="3000" />
-			<!-- CACHE -->
-			<property name="hibernate.cache.provider_class" value="net.sf.ehcache.hibernate.SingletonEhCacheProvider" />
+			<!-- EHCACHE -->
+			<property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
 			<property name="net.sf.ehcache.configurationResourceName" value="/ehcache.xml" />
 			<property name="hibernate.cache.use_query_cache" value="true" />
 			<property name="hibernate.cache.use_second_level_cache" value="true" />

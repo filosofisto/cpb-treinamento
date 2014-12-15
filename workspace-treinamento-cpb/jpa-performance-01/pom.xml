@@ -7,21 +7,32 @@
 	<name>jpa-performance-01</name>
 
 	<properties>
-		<!-- <hibernate.version>4.3.6.Final</hibernate.version> -->
-		<hibernate.version>4.0.0.Alpha1</hibernate.version>
+		<hibernate.version>4.3.6.Final</hibernate.version>
 	</properties>
-	
+
+	<repositories>
+		<repository>
+			<id>sourceforge</id>
+			<url>http://oss.sonatype.org/content/groups/sourceforge/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<!-- <version>4.0.0.Alpha1</version> -->
 			<version>${hibernate.version}</version>
 		</dependency>
 		<dependency>
@@ -29,16 +40,12 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>javax.persistence</artifactId>
-			<version>2.0.0</version>
-		</dependency> -->
 		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache-core</artifactId>
-			<version>2.3.1</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -49,7 +56,6 @@
 			<artifactId>antlr</artifactId>
 			<version>2.7.7</version>
 		</dependency>
-		
 	</dependencies>
 
 	<build>
